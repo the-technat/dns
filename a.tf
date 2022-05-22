@@ -48,7 +48,7 @@ resource "hetznerdns_record" "doc_technat_ch_a" {
   zone_id = hetznerdns_zone.technat_ch.id
   name    = "doc"
   type    = "A"
-  value   = hcloud_server.cloud.ipv4_address
+  value   = data.hcloud_server.cloud.ipv4_address
   ttl     = local.default_ttl
 }
 
@@ -56,7 +56,7 @@ resource "hetznerdns_record" "faultier_technat_ch_a" {
   zone_id = hetznerdns_zone.technat_ch.id
   name    = "faultier"
   type    = "A"
-  value   = hcloud_server.faultier.ipv4_address
+  value   = data.hcloud_server.faultier.ipv4_address
   ttl     = local.default_ttl
 }
 
@@ -72,7 +72,7 @@ resource "hetznerdns_record" "s3_technat_ch_a" {
   zone_id = hetznerdns_zone.technat_ch.id
   name    = "s3"
   type    = "A"
-  value   = hcloud_server.faultier.ipv4_address
+  value   = data.hcloud_server.faultier.ipv4_address
   ttl     = local.default_ttl
 }
 
@@ -80,7 +80,7 @@ resource "hetznerdns_record" "s3_console_technat_ch_a" {
   zone_id = hetznerdns_zone.technat_ch.id
   name    = "s3-console"
   type    = "A"
-  value   = hcloud_server.faultier.ipv4_address
+  value   = data.hcloud_server.faultier.ipv4_address
   ttl     = local.default_ttl
 }
 
@@ -105,7 +105,7 @@ resource "hetznerdns_record" "technat_cloud_a" {
   zone_id = hetznerdns_zone.technat_cloud.id
   name    = "@"
   type    = "A"
-  value   = hcloud_server.cloud.ipv4_address
+  value   = data.hcloud_server.cloud.ipv4_address
   ttl     = local.default_ttl
 }
 
