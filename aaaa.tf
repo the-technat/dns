@@ -48,7 +48,7 @@ resource "hetznerdns_record" "doc_technat_ch_aaaa" {
   zone_id = hetznerdns_zone.technat_ch.id
   name    = "doc"
   type    = "AAAA"
-  value   = hcloud_server.cloud.ipv6_address
+  value   = data.hcloud_server.cloud.ipv6_address
   ttl     = local.default_ttl
 }
 
@@ -56,7 +56,7 @@ resource "hetznerdns_record" "faultier_technat_ch_aaaa" {
   zone_id = hetznerdns_zone.technat_ch.id
   name    = "faultier"
   type    = "AAAA"
-  value   = hcloud_server.faultier.ipv6_address
+  value   = data.hcloud_server.faultier.ipv6_address
   ttl     = local.default_ttl
 }
 
@@ -72,7 +72,7 @@ resource "hetznerdns_record" "s3_technat_ch_aaaa" {
   zone_id = hetznerdns_zone.technat_ch.id
   name    = "s3"
   type    = "AAAA"
-  value   = hcloud_server.faultier.ipv6_address
+  value   = data.hcloud_server.faultier.ipv6_address
   ttl     = local.default_ttl
 }
 
@@ -80,7 +80,7 @@ resource "hetznerdns_record" "s3_console_technat_ch_aaaa" {
   zone_id = hetznerdns_zone.technat_ch.id
   name    = "s3-console"
   type    = "AAAA"
-  value   = hcloud_server.faultier.ipv6_address
+  value   = data.hcloud_server.faultier.ipv6_address
   ttl     = local.default_ttl
 }
 
@@ -105,7 +105,7 @@ resource "hetznerdns_record" "technat_cloud_aaaa" {
   zone_id = hetznerdns_zone.technat_cloud.id
   name    = "@"
   type    = "AAAA"
-  value   = hcloud_server.cloud.ipv6_address
+  value   = data.hcloud_server.cloud.ipv6_address
   ttl     = local.default_ttl
 }
 
