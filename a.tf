@@ -88,7 +88,7 @@ resource "hetznerdns_record" "wiki_technat_ch_a" {
   zone_id = hetznerdns_zone.technat_ch.id
   name    = "wiki"
   type    = "A"
-  value   = local.webhosting_a
+  value   = data.hcloud_server.faultier.ipv4_address
   ttl     = local.default_ttl
 }
 
