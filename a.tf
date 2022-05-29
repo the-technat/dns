@@ -60,14 +60,6 @@ resource "hetznerdns_record" "faultier_technat_ch_a" {
   ttl     = local.default_ttl
 }
 
-resource "hetznerdns_record" "gpg_technat_ch_a" {
-  zone_id = hetznerdns_zone.technat_ch.id
-  name    = "gpg"
-  type    = "A"
-  value   = local.webhosting_a
-  ttl     = local.default_ttl
-}
-
 resource "hetznerdns_record" "s3_technat_ch_a" {
   zone_id = hetznerdns_zone.technat_ch.id
   name    = "s3"
