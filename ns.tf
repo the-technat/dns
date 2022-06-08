@@ -100,13 +100,6 @@ resource "hetznerdns_record" "ns4_a_technat_dev" {
   type    = "NS"
   ttl     = local.ns_default_ttl
 }
-resource "hetznerdns_record" "soa_a_technat_dev" {
-  zone_id = hetznerdns_zone.technat_dev.id
-  name    = "a"
-  value   = "ns1-32.azure-dns.com."
-  type    = "SOA"
-  ttl     = local.ns_default_ttl
-}
 
 # js-buchsi.ch
 resource "hetznerdns_record" "ns1_js_buchsi_ch" {
