@@ -19,7 +19,7 @@ resource "hetznerdns_record" "foto_js_buchsi_ch_a" {
   ttl     = local.default_ttl
 }
 
-resource "hetznerdns_record" "1_preview_js_buchsi_ch_a" {
+resource "hetznerdns_record" "one_preview_js_buchsi_ch_a" {
   zone_id = hetznerdns_zone.js_buchsi_ch.id
   name    = "preview"
   type    = "A"
@@ -27,7 +27,7 @@ resource "hetznerdns_record" "1_preview_js_buchsi_ch_a" {
   ttl     = 1440
 }
 
-resource "hetznerdns_record" "2_preview_js_buchsi_ch_a" {
+resource "hetznerdns_record" "two_preview_js_buchsi_ch_a" {
   zone_id = hetznerdns_zone.js_buchsi_ch.id
   name    = "preview"
   type    = "A"
