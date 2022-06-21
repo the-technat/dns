@@ -19,12 +19,20 @@ resource "hetznerdns_record" "foto_js_buchsi_ch_a" {
   ttl     = local.default_ttl
 }
 
-resource "hetznerdns_record" "preview_js_buchsi_ch_a" {
+resource "hetznerdns_record" "1_preview_js_buchsi_ch_a" {
   zone_id = hetznerdns_zone.js_buchsi_ch.id
   name    = "preview"
   type    = "A"
-  value   = local.webhosting_a
-  ttl     = local.default_ttl
+  value   = "35.172.94.1"
+  ttl     = 1440
+}
+
+resource "hetznerdns_record" "2_preview_js_buchsi_ch_a" {
+  zone_id = hetznerdns_zone.js_buchsi_ch.id
+  name    = "preview"
+  type    = "A"
+  value   = "100.24.208.97"
+  ttl     = 1440
 }
 
 # technat.ch
