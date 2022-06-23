@@ -19,14 +19,6 @@ resource "hetznerdns_record" "foto_js_buchsi_ch_aaaa" {
   ttl     = local.default_ttl
 }
 
-resource "hetznerdns_record" "preview_js_buchsi_ch_aaaa" {
-  zone_id = hetznerdns_zone.js_buchsi_ch.id
-  name    = "preview"
-  type    = "AAAA"
-  value   = local.webhosting_aaaa
-  ttl     = local.default_ttl
-}
-
 # technat.ch
 resource "hetznerdns_record" "technat_ch_aaaa" {
   zone_id = hetznerdns_zone.technat_ch.id
