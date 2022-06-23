@@ -101,6 +101,14 @@ resource "hetznerdns_record" "vpn_technat_ch_aaaa" {
   ttl     = local.default_ttl
 }
 
+resource "hetznerdns_record" "vault_technat_ch_aaaa" {
+  zone_id = hetznerdns_zone.technat_ch.id
+  name    = "vault"
+  type    = "AAAA"
+  value   = data.hcloud_server.faultier.ipv6_address
+  ttl     = local.default_ttl
+}
+
 # technat.cloud
 resource "hetznerdns_record" "technat_cloud_aaaa" {
   zone_id = hetznerdns_zone.technat_cloud.id
