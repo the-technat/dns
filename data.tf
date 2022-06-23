@@ -1,5 +1,5 @@
 data "hcloud_server" "cloud" {
-  name = "technat.cloud"
+  name = "cloud.technat.ch"
 }
 
 data "hcloud_server" "faultier" {
