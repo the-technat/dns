@@ -109,6 +109,14 @@ resource "hetznerdns_record" "vault_technat_ch_aaaa" {
   ttl     = local.default_ttl
 }
 
+resource "hetznerdns_record" "api_technat_ch_aaaa" {
+  zone_id = hetznerdns_zone.technat_ch.id
+  name    = "api"
+  type    = "AAAA"
+  value   = "2a01:4f9:c01e:2ce::1"
+  ttl     = local.default_ttl
+}
+
 # technat.cloud
 resource "hetznerdns_record" "technat_cloud_aaaa" {
   zone_id = hetznerdns_zone.technat_cloud.id
