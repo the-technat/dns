@@ -125,6 +125,46 @@ resource "hetznerdns_record" "gorilla_technat_ch_aaaa" {
   ttl     = local.default_ttl
 }
 
+resource "hetznerdns_record" "bear_technat_ch_aaaa" {
+  zone_id = hetznerdns_zone.technat_ch.id
+  name    = "bear"
+  type    = "AAAA"
+  value   = "2a01:4f9:c011:310::1"
+  ttl     = local.default_ttl
+}
+
+resource "hetznerdns_record" "lion_technat_ch_aaaa" {
+  zone_id = hetznerdns_zone.technat_ch.id
+  name    = "lion"
+  type    = "AAAA"
+  value   = "2a01:4f9:c011:6b5e::1"
+  ttl     = local.default_ttl
+}
+
+resource "hetznerdns_record" "lamb_technat_ch_aaaa" {
+  zone_id = hetznerdns_zone.technat_ch.id
+  name    = "lamb"
+  type    = "AAAA"
+  value   = "2a01:4f9:c011:6d4a::1"
+  ttl     = local.default_ttl
+}
+
+resource "hetznerdns_record" "mouse_technat_ch_aaaa" {
+  zone_id = hetznerdns_zone.technat_ch.id
+  name    = "mouse"
+  type    = "AAAA"
+  value   = "2a01:4f9:c011:7075::1"
+  ttl     = local.default_ttl
+}
+
+resource "hetznerdns_record" "duck_technat_ch_aaaa" {
+  zone_id = hetznerdns_zone.technat_ch.id
+  name    = "duck"
+  type    = "AAAA"
+  value   = "2a01:4f9:c011:705f::1"
+  ttl     = local.default_ttl
+}
+
 # technat.cloud
 resource "hetznerdns_record" "technat_cloud_aaaa" {
   zone_id = hetznerdns_zone.technat_cloud.id
