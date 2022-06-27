@@ -132,6 +132,14 @@ resource "hetznerdns_record" "api_technat_ch_a" {
   ttl     = local.default_ttl
 }
 
+resource "hetznerdns_record" "gorilla_technat_ch_a" {
+  zone_id = hetznerdns_zone.technat_ch.id
+  name    = "gorilla"
+  type    = "A"
+  value   = "65.108.87.190"
+  ttl     = local.default_ttl
+}
+
 # technat.cloud
 resource "hetznerdns_record" "technat_cloud_a" {
   zone_id = hetznerdns_zone.technat_cloud.id
