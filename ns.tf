@@ -25,52 +25,6 @@ resource "hetznerdns_record" "ns3_technat_ch" {
   ttl     = local.ns_default_ttl
 }
 
-# technat.cloud
-resource "hetznerdns_record" "ns1_technat_cloud" {
-  zone_id = hetznerdns_zone.technat_cloud.id
-  name    = "@"
-  value   = "oxygen.ns.hetzner.com."
-  type    = "NS"
-  ttl     = local.ns_default_ttl
-}
-resource "hetznerdns_record" "ns2_technat_cloud" {
-  zone_id = hetznerdns_zone.technat_cloud.id
-  name    = "@"
-  value   = "helium.ns.hetzner.de."
-  type    = "NS"
-  ttl     = local.ns_default_ttl
-}
-resource "hetznerdns_record" "ns3_technat_cloud" {
-  zone_id = hetznerdns_zone.technat_cloud.id
-  name    = "@"
-  value   = "hydrogen.ns.hetzner.com."
-  type    = "NS"
-  ttl     = local.ns_default_ttl
-}
-
-# technat.dev
-resource "hetznerdns_record" "ns1_technat_dev" {
-  zone_id = hetznerdns_zone.technat_dev.id
-  name    = "@"
-  value   = "oxygen.ns.hetzner.com."
-  type    = "NS"
-  ttl     = local.ns_default_ttl
-}
-resource "hetznerdns_record" "ns2_technat_dev" {
-  zone_id = hetznerdns_zone.technat_dev.id
-  name    = "@"
-  value   = "helium.ns.hetzner.de."
-  type    = "NS"
-  ttl     = local.ns_default_ttl
-}
-resource "hetznerdns_record" "ns3_technat_dev" {
-  zone_id = hetznerdns_zone.technat_dev.id
-  name    = "@"
-  value   = "hydrogen.ns.hetzner.com."
-  type    = "NS"
-  ttl     = local.ns_default_ttl
-}
-
 # js-buchsi.ch
 resource "hetznerdns_record" "ns1_js_buchsi_ch" {
   zone_id = hetznerdns_zone.js_buchsi_ch.id

@@ -16,3 +16,11 @@ resource "hetznerdns_record" "js_buchsi_ch_mx" {
   type    = "MX"
   ttl     = local.default_ttl
 }
+
+resource "hetznerdns_record" "alleaffengaffen_ch_mx" {
+  zone_id = hetznerdns_zone.alleaffengaffen_ch.id
+  name    = "@"
+  value   = "100 mta-gw.infomaniak.ch."
+  type    = "MX"
+  ttl     = local.default_ttl
+}
