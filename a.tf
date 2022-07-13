@@ -132,15 +132,6 @@ resource "hetznerdns_record" "api_technat_ch_a" {
   ttl     = local.default_ttl
 }
 
-# technat.cloud
-resource "hetznerdns_record" "technat_cloud_a" {
-  zone_id = hetznerdns_zone.technat_cloud.id
-  name    = "@"
-  type    = "A"
-  value   = data.hcloud_server.cloud.ipv4_address
-  ttl     = local.default_ttl
-}
-
 # alleaffengaffen.ch
 resource "hetznerdns_record" "alleaffengaffen_ch_a" {
   zone_id = hetznerdns_zone.alleaffengaffen_ch.id
